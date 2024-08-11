@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
-}
+/* App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* General Styles */
+.app-container {
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
+  /* Stack header and content vertically on mobile */
+}
+
+.app-header {
+  display: none;
+  /* Hide header on larger screens by default */
+  position: fixed;
+  /* Make the header fixed */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu-button {
+  font-size: 1rem;
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.menu-button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.main-content {
+  margin-left: 250px;
+  /* Default margin for larger screens */
+  flex-grow: 1;
+  background-color: #fff;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.main-content.with-sidebar {
+  margin-left: 250px;
+  /* Adjust margin for larger screens */
+}
+
+/* Mobile content - single column scrolling */
+@media (max-width: 768px) {
+  .app-header {
+    display: flex;
+    /* Show header on mobile devices */
   }
-  to {
-    transform: rotate(360deg);
+
+  .main-content {
+    margin-left: 0;
+    /* Reset margin on mobile */
+    padding-top: 60px;
+    /* Add padding to account for the fixed header height */
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #fff;
+    overflow: auto;
+    box-sizing: border-box;
+  }
+
+  .scrollable-content>* {
+    margin-bottom: 20px;
+    /* Spacing between sections */
   }
 }
