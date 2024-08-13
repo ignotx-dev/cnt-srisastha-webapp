@@ -21,13 +21,11 @@
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    height: 300px;
-
 }
 
 .banner-image {
     width: 100%;
-    height: 100%;
+    height: 300px;
     object-fit: cover;
     filter: brightness(60%);
     border-radius: 12px;
@@ -221,4 +219,116 @@
 .shop-card:hover .view-map {
     display: block;
     /* Show 'View on Map' on hover */
+}
+
+/* Responsive Styles */
+
+/* Extra Small Devices (max-width: 767px) */
+@media (max-width: 767px) {
+    .info-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-image img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .info-content {
+        max-width: 100%;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .shop-card {
+        flex: 1 1 100%;
+    }
+
+    .shops-heading {
+        font-size: 1.5rem;
+    }
+}
+
+/* Small to Medium Devices (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .info-container {
+        gap: 20px;
+    }
+
+    .info-image img {
+        max-width: 350px;
+    }
+
+    .shops-heading {
+        font-size: 1.75rem;
+    }
+
+    .shop-card {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    .cards-container {
+        gap: 15px;
+    }
+}
+
+/* Medium to Large Devices (1025px to 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .info-container {
+        gap: 25px;
+    }
+
+    .info-image img {
+        max-width: 400px;
+    }
+
+    .shops-heading {
+        font-size: 2rem;
+    }
+
+    .shop-card {
+        flex: 1 1 calc(33.333% - 20px);
+    }
+}
+
+/* Large to Extra Large Devices (1441px to 1920px) */
+@media (min-width: 1441px) and (max-width: 1920px) {
+    .info-container {
+        gap: 30px;
+    }
+
+    .info-image img {
+        max-width: 450px;
+    }
+
+    .shops-heading {
+        font-size: 2.25rem;
+    }
+
+    .shop-card {
+        flex: 1 1 calc(25% - 20px);
+    }
+}
+
+/* Extra Large Devices (1921px and up) */
+@media (min-width: 1921px) {
+    .info-container {
+        gap: 40px;
+    }
+
+    .info-image img {
+        max-width: 500px;
+    }
+
+    .shops-heading {
+        font-size: 2.5rem;
+    }
+
+    .shop-card {
+        flex: 1 1 calc(20% - 20px);
+    }
 }

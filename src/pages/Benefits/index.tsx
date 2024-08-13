@@ -1,33 +1,37 @@
 import React from 'react';
-import styles from './Benefits.module.css'; // Import styles as a module
-
-const Benefits: React.FC = () => {
-    const benefits = [
-        { image: 'https://via.placeholder.com/200x150?text=Benefit+1', text: "Benefit 1: Boosts energy levels" },
-        { image: 'https://via.placeholder.com/200x150?text=Benefit+2', text: "Benefit 2: Rich in essential nutrients" },
-        { image: 'https://via.placeholder.com/200x150?text=Benefit+3', text: "Benefit 3: Supports digestive health" },
-        { image: 'https://via.placeholder.com/200x150?text=Benefit+4', text: "Benefit 4: Promotes healthy skin" },
-        { image: 'https://via.placeholder.com/200x150?text=Benefit+5', text: "Benefit 5: Enhances overall wellness" },
-    ];
-
-    return (
-        <div className={styles['benefits-container']}>
-            <h1>Benefits</h1>
-            <p>Discover the benefits of our cotton seed milk products.</p>
-            <div className={styles['cards-container']}>
-                {benefits.map((benefit, index) => (
-                    <div className={styles.card} key={index}>
-                        <img
-                            src={benefit.image}
-                            alt={`Benefit ${index + 1}`}
-                            className={styles['card-image']}
-                        />
-                        <p className={styles['card-text']}>{benefit.text}</p>
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
+import styles from './Benefits.module.css';
+import nutrientsImage from '../../assets/images/nutrients.jpg';
+import digestiveImage from '../../assets/images/digestiveImage.jpg';
+import skinImage from '../../assets/images/skinImage.jpg';
+import immuneImage from '../../assets/images/immuneImage.jpg';
+interface Benefit {
+    image: string;
+    text: string;
+    description: string;
 }
+
+const benefits: Benefit[] = [
+    { image: nutrientsImage, text: "Rich in Nutrients", description: "Packed with essential vitamins and minerals." },
+    { image: digestiveImage, text: "Supports Digestive Health", description: "Promotes a healthy gut." },
+    { image: skinImage, text: "Promotes Healthy Skin", description: "Maintains a youthful appearance." },
+    { image: immuneImage, text: "Improves Immune Function", description: "Boosts your immune system." },
+];
+
+const Benefits: React.FC = () => (
+    <div className={styles.benefitsContainer}>
+        <h2 className={styles.title}>Top Benefits of Cotton Seed Milk</h2>
+        <div className={styles.gridContainer}>
+            {benefits.map((benefit, index) => (
+                <div className={styles.benefitCard} key={index}>
+                    <img src={benefit.image} alt={benefit.text} className={styles.benefitImage} />
+                    <div className={styles.benefitContent}>
+                        <h3 className={styles.benefitText}>{benefit.text}</h3>
+                        <p className={styles.benefitDescription}>{benefit.description}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+);
 
 export default Benefits;
