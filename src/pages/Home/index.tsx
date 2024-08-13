@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Home.css';
+import styles from './Home.module.css'; // Import styles as a module
 import sastha from '../../assets/images/sastha.webp';
 import sastha1 from '../../assets/images/mdu-01.webp';
 import sastha2 from '../../assets/images/sastha-01.webp';
@@ -30,10 +30,13 @@ const Home: React.FC = () => {
     }, [direction, images.length]);
 
     return (
-        <div className="home-container">
-            <div className="image-slider" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+        <div className={styles['home-container']}>
+            <div
+                className={styles['image-slider']}
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
                 {images.map((image, index) => (
-                    <div className="slide" key={index}>
+                    <div className={styles['slide']} key={index}>
                         <img src={image} alt={`Slide ${index + 1}`} />
                     </div>
                 ))}

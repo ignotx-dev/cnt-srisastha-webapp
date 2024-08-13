@@ -1,0 +1,64 @@
+/* Existing styles in Reviews.css */
+.reviews-container {
+    background-color: #faf3eb;
+    padding: 60px 20px;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    position: relative;
+    left: 0;
+}
+
+.reviews-header {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.reviews-header h1 {
+    font-size: 48px;
+    color: #333;
+    font-weight: 700;
+    margin: 0;
+}
+
+.reviews-header p {
+    font-size: 20px;
+    color: #555;
+    margin: 10px 0 0;
+}
+
+/* Updated Button Styles */
+button {
+    padding: 10px 20px;
+    background-color: #d49a6a;
+    /* Soft orange-brown */
+    color: #fff;
+    /* White text */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b47d50;
+    /* Slightly darker shade for hover */
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(212, 154, 106, 0.5);
+    /* Light orange-brown shadow */
+}
+
+button:active {
+    background-color: #995c2b;
+    /* Even darker shade for active state */
+}

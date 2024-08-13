@@ -1,0 +1,222 @@
+/* General Modal Styles */
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #f8e3d0, #faf3eb);
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    /* Adjust for larger screens */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.4s ease-out;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Optional animation to give a slide-in effect */
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #4A4A4A;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #555;
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #d49a6a;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.submit-button {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #e8b076, #d49a6a);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background: linear-gradient(135deg, #c98d59, #b47d50);
+    transform: translateY(-2px);
+}
+
+.close-button {
+    padding: 12px 25px;
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.close-button:hover {
+    background-color: #999;
+    transform: translateY(-2px);
+}
+
+/* Responsive Styles */
+
+/* Styles for screens with max-width of 767px (mobile devices) */
+@media (max-width: 767px) {
+    .modal-content {
+        width: 90%;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .submit-button,
+    .close-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Styles for screens between 768px and 1024px (tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+    .modal-content {
+        width: 85%;
+        padding: 20px;
+        font-size: 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .submit-button,
+    .close-button {
+        padding: 11px 22px;
+        font-size: 15px;
+    }
+}
+
+/* Styles for screens between 1025px and 1440px (small laptops/desktops) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .modal-content {
+        width: 70%;
+        padding: 22px;
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .submit-button,
+    .close-button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
+
+/* Styles for screens between 1441px and 1920px (large laptops/desktops) */
+@media (min-width: 1441px) and (max-width: 1920px) {
+    .modal-content {
+        width: 60%;
+        padding: 25px;
+        font-size: 17px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .submit-button,
+    .close-button {
+        padding: 13px 28px;
+        font-size: 17px;
+    }
+}
+
+/* Styles for screens wider than 1921px (ultra-wide desktops) */
+@media (min-width: 1921px) {
+    .modal-content {
+        width: 50%;
+        padding: 30px;
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .submit-button,
+    .close-button {
+        padding: 15px 30px;
+        font-size: 18px;
+    }
+}

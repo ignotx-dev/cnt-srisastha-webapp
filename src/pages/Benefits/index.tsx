@@ -1,5 +1,5 @@
 import React from 'react';
-import './Benefits.css';
+import styles from './Benefits.module.css'; // Import styles as a module
 
 const Benefits: React.FC = () => {
     const benefits = [
@@ -11,14 +11,18 @@ const Benefits: React.FC = () => {
     ];
 
     return (
-        <div className="benefits-container">
+        <div className={styles['benefits-container']}>
             <h1>Benefits</h1>
             <p>Discover the benefits of our cotton seed milk products.</p>
-            <div className="cards-container">
+            <div className={styles['cards-container']}>
                 {benefits.map((benefit, index) => (
-                    <div className="card" key={index}>
-                        <img src={benefit.image} alt={`Benefit ${index + 1}`} className="card-image" />
-                        <p className="card-text">{benefit.text}</p>
+                    <div className={styles.card} key={index}>
+                        <img
+                            src={benefit.image}
+                            alt={`Benefit ${index + 1}`}
+                            className={styles['card-image']}
+                        />
+                        <p className={styles['card-text']}>{benefit.text}</p>
                     </div>
                 ))}
             </div>

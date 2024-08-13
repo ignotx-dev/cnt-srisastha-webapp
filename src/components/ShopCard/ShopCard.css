@@ -1,0 +1,28 @@
+.shop-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    /* Fixed width for each card */
+    text-align: center;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.shop-card-image {
+    width: 100%;
+    height: auto;
+}
+
+.shop-card-info {
+    padding: 15px;
+}
+
+.shop-card-info h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.shop-card-info p {
+    margin: 10px 0 0;
+    font-size: 1em;
+}
