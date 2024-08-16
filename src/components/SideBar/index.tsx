@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Sidebar.css';
-import logo from '../../assets/images/logo.webp';
+import logo from '../../assets/images/sastha.png';
 
 // SVG icons as React components
 const FacebookIcon = () => (

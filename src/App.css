@@ -8,21 +8,7 @@
   /* Stack header and content vertically on mobile */
 }
 
-.app-header {
-  display: none;
-  /* Hide header on larger screens by default */
-  position: fixed;
-  /* Make the header fixed */
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #f8f8f8;
-  border-bottom: 1px solid #ddd;
-}
+
 
 .logo {
   font-size: 1.5rem;
